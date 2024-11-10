@@ -47,13 +47,13 @@ const ProductCard = (props) => {
                   src={item?.images[0].url}
                   className="img-fluid  mx-auto"
                   alt="product image"
-                  width={160}
+                  width={300}
                 />
                 <img
-                  src={watch2}
+                  src={item?.images[0].url}
                   className="img-fluid  mx-auto"
                   alt="product image"
-                  width={160}
+                  width={300}
                 />
               </div>
               <div className="product-details">
@@ -72,7 +72,7 @@ const ProductCard = (props) => {
                   }`}
                   dangerouslySetInnerHTML={{ __html: item?.description }}
                 ></p>
-                <p className="price">$ {item?.price}</p>
+                <p className="price">Kshs {item?.price}</p>
               </div>
               <div className="action-bar position-absolute">
                 <div className="d-flex flex-column gap-15">

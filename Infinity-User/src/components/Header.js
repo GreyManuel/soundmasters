@@ -52,14 +52,14 @@ const navigate=useNavigate()
           <div className="row">
             <div className="col-6">
               <p className="text-white mb-0">
-                Free Shipping Over $100 & Free Returns
+                Free Shipping Items Over Kshs 100,000
               </p>
             </div>
             <div className="col-6">
               <p className="text-end text-white mb-0">
-                Hotline:
-                <a className="text-white" href="tel:+91 8264954234">
-                  +91 8264954234
+                Hotline:   
+                <a className="text-white" href="tel:+254 723 946292">
+                  +254 723 946292
                 </a>
               </p>
             </div>
@@ -71,7 +71,7 @@ const navigate=useNavigate()
           <div className="row align-items-center">
             <div className="col-2">
               <h2>
-                <Link className="text-white">Infinity</Link>
+                <Link className="text-white">Soundmasters</Link>
               </h2>
             </div>
             <div className="col-5">

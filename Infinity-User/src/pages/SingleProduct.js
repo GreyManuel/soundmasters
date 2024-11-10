@@ -52,7 +52,7 @@ const SingleProduct = () => {
   const props = {
     width: 594,
     height: 600,
-    zoomWidth: 600,
+    zoomWidth: 50,
 
     img:  productState?.images[0]?.url ? productState?.images[0]?.url : "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?cs=srgb&dl=pexels-fernando-arcos-190819.jpg&fm=jpg" ,
   };
@@ -137,7 +137,7 @@ const SingleProduct = () => {
                 </h3>
               </div>
               <div className="border-bottom py-3">
-                <p className="price">$ {productState?.price}</p>
+                <p className="price">Kshs {productState?.price}</p>
                 <div className="d-flex align-items-center gap-10">
                   <ReactStars
                     count={5}

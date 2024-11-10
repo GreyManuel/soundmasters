@@ -37,7 +37,7 @@ console.log(blogState)
           </div>
           <div className="col-9">
             <div className="row">
-              {blogState &&
+              {/* {blogState &&
                 blogState?.map((item, index) => {
                   return (
                     <div className="col-6 mb-3" key={index}>
@@ -52,7 +52,7 @@ console.log(blogState)
                       />
                     </div>
                   );
-                })}
+                })} */}
             </div>
           </div>
         </div>

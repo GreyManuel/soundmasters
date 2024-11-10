@@ -50,9 +50,9 @@ const Home = () => {
                 alt="main banner"
               />
               <div className="main-banner-content position-absolute">
-                <h4>SUPERCHARGED FOR PROS.</h4>
-                <h5>iPad S13+ Pro.</h5>
-                <p>From $999.00 or $41.62/mo.</p>
+                <h4>BEST MARKET PRICE.</h4>
+                <h5>Maple Leaf</h5>
+                <p>From Kshs 14,999</p>
                 <Link className="button">BUY NOW</Link>
               </div>
             </div>
@@ -69,7 +69,7 @@ const Home = () => {
                   <h4>Best Sake</h4>
                   <h5>iPad S13+ Pro.</h5>
                   <p>
-                    From $999.00 <br /> or $41.62/mo.
+                    From Kshs999.00 <br /> or Kshs41.62/mo.
                   </p>
                 </div>
               </div>
@@ -83,7 +83,7 @@ const Home = () => {
                   <h4>NEW ARRIVAL</h4>
                   <h5>But IPad Air</h5>
                   <p>
-                    From $999.00 <br /> or $41.62/mo.
+                    From Kshs999.00 <br /> or Kshs41.62/mo.
                   </p>
                 </div>
               </div>
@@ -97,7 +97,7 @@ const Home = () => {
                   <h4>NEW ARRIVAL</h4>
                   <h5>But IPad Air</h5>
                   <p>
-                    From $999.00 <br /> or $41.62/mo.
+                    From Kshs999.00 <br /> or Kshs41.62/mo.
                   </p>
                 </div>
               </div>
@@ -111,7 +111,7 @@ const Home = () => {
                   <h4>NEW ARRIVAL</h4>
                   <h5>But IPad Air</h5>
                   <p>
-                    From $999.00 <br /> or $41.62/mo.
+                    From Kshs999.00 <br /> or Kshs41.62/mo.
                   </p>
                 </div>
               </div>
@@ -230,13 +230,13 @@ const Home = () => {
                           src={item?.images[0].url}
                           className="img-fluid  mx-auto"
                           alt="product image"
-                          width={160}
+                          width={300}
                         />
                         <img
-                          src={watch2}
+                          src={item?.images[0].url}
                           className="img-fluid  mx-auto"
                           alt="product image"
-                          width={160}
+                          width={300}
                         />
                       </div>
                       <div className="product-details">
@@ -250,7 +250,7 @@ const Home = () => {
                           activeColor="#ffd700"
                         />
 
-                        <p className="price">$ {item?.price}</p>
+                        <p className="price">Kshs {item?.price}</p>
                       </div>
                       <div className="action-bar position-absolute">
                         <div className="d-flex flex-column gap-15">
@@ -285,7 +285,7 @@ const Home = () => {
               <div className="famous-content position-absolute">
                 <h5>Big Screen</h5>
                 <h6>Smart Watch Series 7</h6>
-                <p>From $399or $16.62/mo. for 24 mo.*</p>
+                <p>From Kshs399or Kshs16.62/mo. for 24 mo.*</p>
               </div>
             </div>
           </div>
@@ -314,7 +314,7 @@ const Home = () => {
                 <h5 className="text-dark">smartphones</h5>
                 <h6 className="text-dark">Smartphone 13 Pro.</h6>
                 <p className="text-dark">
-                  Now in Green. From $999.00 or $41.62/mo. for 24 mo. Footnote*
+                  Now in Green. From Kshs999.00 or Kshs41.62/mo. for 24 mo. Footnote*
                 </p>
               </div>
             </div>
@@ -330,7 +330,7 @@ const Home = () => {
                 <h5 className="text-dark">home speakers</h5>
                 <h6 className="text-dark">Room-filling sound.</h6>
                 <p className="text-dark">
-                  From $699 or $116.58/mo. for 12 mo.*
+                  From Kshs699 or Kshs116.58/mo. for 12 mo.*
                 </p>
               </div>
             </div>
@@ -413,7 +413,7 @@ const Home = () => {
                           activeColor="#ffd700"
                         />
 
-                        <p className="price">$ {item?.price}</p>
+                        <p className="price">Kshs {item?.price}</p>
                       </div>
                       <div className="action-bar position-absolute">
                         <div className="d-flex flex-column gap-15">
