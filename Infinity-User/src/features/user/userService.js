@@ -1,12 +1,25 @@
 import axios from "axios";
 import { base_url, config } from "../../utils/axiosConfig";
-const register = async (userData) => {
-  const response = await axios.post(`${base_url}user/register`, userData);
-  if (response.data) {
-    if (response.data) {
-      return response.data;
-    }
-  }
+const register = async (userData, rejectWithValue) => {
+  // const response = await axios.post(`localhost:5000/api/user/register`, userData);
+  // if (response.data) {
+  //   if (response.data) {
+  //     return response.data;
+  //   }
+  // }
+
+try {
+  const response = await axios.post(
+    `${base_url}user/register`,
+    userData
+  ); 
+  return response.data;
+} catch (error) {
+  console.error("Error message:", error.message);
+  console.error("Error code:", error.code);
+  console.error("Error config:", error.config);
+  return rejectWithValue(error.message);
+}
 };
 const login = async (userData) => {
   const response = await axios.post(`${base_url}user/login`, userData);

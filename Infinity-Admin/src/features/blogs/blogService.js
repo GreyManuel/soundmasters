@@ -3,18 +3,18 @@ import { base_url } from "../../utils/baseUrl";
 import { config } from "../../utils/axiosconfig";
 
 const getBlogs = async () => {
-  const response = await axios.get(`${base_url}blog/`);
+  const response = await axios.get(`http://localhost:5000/api/blog/`);
 
   return response.data;
 };
 const createBlog = async (blog) => {
-  const response = await axios.post(`${base_url}blog/`, blog, config);
+  const response = await axios.post(`http://localhost:5000/api/blog/`, blog, config);
 
   return response.data;
 };
 const updateBlog = async (blog) => {
   const response = await axios.put(
-    `${base_url}blog/${blog.id}`,
+    `http://localhost:5000/api/blog/${blog.id}`,
     {
       title: blog.blogData.title,
       description: blog.blogData.description,
@@ -27,13 +27,13 @@ const updateBlog = async (blog) => {
   return response.data;
 };
 const getBlog = async (id) => {
-  const response = await axios.get(`${base_url}blog/${id}`, config);
+  const response = await axios.get(`http://localhost:5000/api/blog/${id}`, config);
 
   return response.data;
 };
 
 const deleteBlog = async (id) => {
-  const response = await axios.delete(`${base_url}blog/${id}`, config);
+  const response = await axios.delete(`http://localhost:5000/api/blog/${id}`, config);
 
   return response.data;
 };
