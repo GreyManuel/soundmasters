@@ -71,7 +71,7 @@ const navigate=useNavigate()
           <div className="row align-items-center">
             <div className="col-2">
               <h2>
-                <Link className="text-white">Soundmasters</Link>
+                <Link className="text-white"><h3>Soundmasters</h3></Link>
               </h2>
             </div>
             <div className="col-5">

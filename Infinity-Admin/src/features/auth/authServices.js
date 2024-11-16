@@ -2,20 +2,20 @@ import axios from "axios";
 import { config } from "../../utils/axiosconfig";
 import { base_url } from "../../utils/baseUrl";
 const login = async (user) => {
-  const response = await axios.post(`http://localhost:5000/api/user/admin-login`, user);
+  const response = await axios.post(`${import.meta.env.REACT_APP_API_ENDPOINT}/api/user/admin-login`, user);
   if (response.data) {
     localStorage.setItem("user", JSON.stringify(response.data));
   }
   return response.data;
 };
 const getOrders = async () => {
-  const response = await axios.get(`http://localhost:5000/api/user/getallorders`, config);
+  const response = await axios.get(`${import.meta.env.REACT_APP_API_ENDPOINT}/api/user/getallorders`, config);
 
   return response.data;
 };
 const getOrder = async (id) => {
   const response = await axios.get(
-    `http://localhost:5000/api/user/getaOrder/${id}`,
+    `${import.meta.env.REACT_APP_API_ENDPOINT}/api/user/getaOrder/${id}`,
     config
   );
 
@@ -24,7 +24,7 @@ const getOrder = async (id) => {
 // what was the name of the file we working at ?
 const updateOrder = async (data) => {
   const response = await axios.put(
-    `http://localhost:5000/api/user/updateOrder/${data.id}`, {status:data?.status},
+    `${import.meta.env.REACT_APP_API_ENDPOINT}/api/user/updateOrder/${data.id}`, {status:data?.status},
     config
   );
 
@@ -32,7 +32,7 @@ const updateOrder = async (data) => {
 };
 const getMonthlyOrders = async () => {
   const response = await axios.get(
-    `http://localhost:5000/api/user/getMonthWiseOrderIncome`,
+    `${import.meta.env.REACT_APP_API_ENDPOINT}/api/user/getMonthWiseOrderIncome`,
     config
   );
 
@@ -41,7 +41,7 @@ const getMonthlyOrders = async () => {
 
 const getYearlyStats = async () => {
   const response = await axios.get(
-    `http://localhost:5000/api/user/getyearlyorders`,
+    `${import.meta.env.REACT_APP_API_ENDPOINT}/api/user/getyearlyorders`,
     config
   );
 
