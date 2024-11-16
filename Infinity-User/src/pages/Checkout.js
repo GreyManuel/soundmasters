@@ -87,7 +87,7 @@ console.log(paymentInfo,shippingInfo);
       return;
     }
   
-    const result = await axios.post("http://localhost:5000/api/user/order/checkout",{amount:totalAmount+5},config)
+    const result = await axios.post("${import.meta.env.REACT_APP_API_ENDPOINT}/api/user/order/checkout",{amount:totalAmount+5},config)
     if (!result) {
       alert("Something Went Wrong")
       return;
@@ -112,7 +112,7 @@ console.log(paymentInfo,shippingInfo);
               
           };
 
-          const result = await axios.post("http://localhost:5000/api/user/order/paymentVerification", data,config);
+          const result = await axios.post("${import.meta.env.REACT_APP_API_ENDPOINT}/api/user/order/paymentVerification", data,config);
 
        await setPaymentInfo({
           razorpayPaymentId: response.razorpayPaymentId,

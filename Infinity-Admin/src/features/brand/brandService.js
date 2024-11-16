@@ -2,19 +2,19 @@ import axios from "axios";
 import { config } from "../../utils/axiosconfig";
 import { base_url } from "../../utils/baseUrl";
 const getBrands = async () => {
-  const response = await axios.get(`http://localhost:5000/api/brand/`);
+  const response = await axios.get(`${import.meta.env.REACT_APP_API_ENDPOINT}/api/brand/`);
 
   return response.data;
 };
 
 const createBrand = async (brand) => {
-  const response = await axios.post(`http://localhost:5000/api/brand/`, brand, config);
+  const response = await axios.post(`${import.meta.env.REACT_APP_API_ENDPOINT}/api/brand/`, brand, config);
 
   return response.data;
 };
 const updateBrand = async (brand) => {
   const response = await axios.put(
-    `http://localhost:5000/api/brand/${brand.id}`,
+    `${import.meta.env.REACT_APP_API_ENDPOINT}/api/brand/${brand.id}`,
     { title: brand.brandData.title },
     config
   );
@@ -22,13 +22,13 @@ const updateBrand = async (brand) => {
   return response.data;
 };
 const getBrand = async (id) => {
-  const response = await axios.get(`http://localhost:5000/api/brand/${id}`, config);
+  const response = await axios.get(`${import.meta.env.REACT_APP_API_ENDPOINT}/api/brand/${id}`, config);
 
   return response.data;
 };
 
 const deleteBrand = async (id) => {
-  const response = await axios.delete(`http://localhost:5000/api/brand/${id}`, config);
+  const response = await axios.delete(`${import.meta.env.REACT_APP_API_ENDPOINT}/api/brand/${id}`, config);
 
   return response.data;
 };

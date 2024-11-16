@@ -2,19 +2,19 @@ import axios from "axios";
 import { config } from "../../utils/axiosconfig";
 import { base_url } from "../../utils/baseUrl";
 const getCoupons = async () => {
-  const response = await axios.get(`http://localhost:5000/api/coupon/`, config);
+  const response = await axios.get(`${import.meta.env.REACT_APP_API_ENDPOINT}/api/coupon/`, config);
 
   return response.data;
 };
 
 const createCoupons = async (coupon) => {
-  const response = await axios.post(`http://localhost:5000/api/coupon/`, coupon, config);
+  const response = await axios.post(`${import.meta.env.REACT_APP_API_ENDPOINT}/api/coupon/`, coupon, config);
 
   return response.data;
 };
 const updateCoupon = async (coupon) => {
   const response = await axios.put(
-    `http://localhost:5000/api/coupon/${coupon.id}`,
+    `${import.meta.env.REACT_APP_API_ENDPOINT}/api/coupon/${coupon.id}`,
     {
       name: coupon.couponData.name,
       expiry: coupon.couponData.expiry,
@@ -26,13 +26,13 @@ const updateCoupon = async (coupon) => {
   return response.data;
 };
 const getCoupon = async (id) => {
-  const response = await axios.get(`http://localhost:5000/api/coupon/${id}`, config);
+  const response = await axios.get(`${import.meta.env.REACT_APP_API_ENDPOINT}/api/coupon/${id}`, config);
 
   return response.data;
 };
 
 const deleteCoupon = async (id) => {
-  const response = await axios.delete(`http://localhost:5000/api/coupon/${id}`, config);
+  const response = await axios.delete(`${import.meta.env.REACT_APP_API_ENDPOINT}/api/coupon/${id}`, config);
 
   return response.data;
 };
